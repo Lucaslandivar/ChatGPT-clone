@@ -1,1 +1,1 @@
-# ChstGPT-clone
+# ChatGPT-clone
