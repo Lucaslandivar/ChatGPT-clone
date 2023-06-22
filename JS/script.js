@@ -5,7 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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";
+const API_KEY = "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";
 const initialHeight = chatInput.scrollHeight;
 
 const loadDataFromLocalstorage = () => {
@@ -15,8 +15,8 @@ const loadDataFromLocalstorage = () => {
     themeButton.innerText = document.body.classList.contains("light-mode") ? "dark_mode" : "light_mode";
 
     const defaultText = `<div class="default-text">
-                            <h1>ChatGPT Clone</h1>
-                            <p>Start a conversation and explore the power of AI.<br> Your chat history will be displayed here.</p>
+                            <h1>Talk 2 Me</h1>
+                            <p>Start a conversation with me and let me help you.<br> Your chat history will be displayed here.</p>
                         </div>`
 
     chatContainer.innerHTML = localStorage.getItem("all-chats") || defaultText;
@@ -76,7 +76,7 @@ const copyResponse = (copyBtn) => {
 const showTypingAnimation = () => {
     const html = `<div class="chat-content">
                     <div class="chat-details">
-                        <img src="img/OIP.jpeg" alt="chatbot-img">
+                        <img src="img/Eu.png" alt="chatincoming-img">
                         <div class="typing-animation">
                             <div class="typing-dot" style="--delay: 0.2s"></div>
                             <div class="typing-dot" style="--delay: 0.3s"></div>
@@ -137,4 +137,12 @@ chatInput.addEventListener("keydown", () => {
     }
 });
 
-sendButton.addEventListener("click", handleOutgoingChat);
+const handleKeyPress = (e) => {
+    if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+      e.preventDefault();
+      handleOutgoingChat();
+    }
+  };
+
+  chatInput.addEventListener("keydown", handleKeyPress);
+
