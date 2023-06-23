@@ -2,7 +2,7 @@
   <img src="img/Captura de Tela (18).png">
 
 <h2>Project Deploy</h2>
- <a href="https://lnkd.in/drs4eYi2" target_blank>Click here</a>
+ <a href="https://lnkd.in/drs4eYi2" target="_blank">Click here</a>
   
 <h2>Description of the project</h2>
 <p>It all started in my name generator project, where I investigated how to improve the project and it turned out that I could integrate an openai API, i.e. a ChatGPT API to use artificial intelligence to generate better names based on the user's description.
