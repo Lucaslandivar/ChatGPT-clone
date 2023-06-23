@@ -5,7 +5,7 @@ const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
-const API_KEY = "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";
+const API_KEY = "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";
 const initialHeight = chatInput.scrollHeight;
 
 const loadDataFromLocalstorage = () => {
@@ -137,12 +137,5 @@ chatInput.addEventListener("keydown", (e) => {
     }
 });
 
-const handleKeyPress = (e) => {
-    if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
-      e.preventDefault();
-      handleOutgoingChat();
-    }
-  };
 
-  chatInput.addEventListener("keydown", handleKeyPress);
 
